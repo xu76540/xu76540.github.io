@@ -55,7 +55,7 @@ window.onload = function () {
         // 获取 当天的 时
         let h_c = h - hours_transfer_list[day_index]
 
-        h_c = h_c > 0 ? h_c : h_c + 24
+        h_c = h_c >= 0 ? h_c : h_c + 24
 
         left.innerHTML = y_c + "-" + mn_c + "-" + d_c;
         hour.style.transform = `rotate(${h_c * 15}deg)`
