@@ -9,7 +9,15 @@ ul, li {
 }
 
 body {
-    background: #00796b;
+    /*background: #00796b;*/
+    background: url("statics/bg.jpg");
+    background-position: center center;
+    /* 背景图不平铺 */
+    background-repeat: no-repeat;
+    /* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+    background-attachment: fixed;
+    /* 让背景图基于容器大小伸缩 */
+    background-size: cover;
 }
 
 .container {
@@ -127,7 +135,7 @@ body {
     left: calc(50% - 30px);
     text-align: center;
     width: 60px;
-    hight: 10px;
+    height: 10px;
     font-size: 1px;
     color: #424242;
 }
