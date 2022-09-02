@@ -140,6 +140,18 @@ body {
     color: #424242;
 }
 
+.details {
+    z-index: 12;
+    position: absolute;
+    top: calc(30% - 120px);
+    left: calc(50% - 140px);
+    text-align: center;
+    width: 60px;
+    height: 10px;
+    font-size: 3px;
+    color: #ffffff;
+}
+
 
 
 

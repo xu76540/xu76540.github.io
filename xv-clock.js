@@ -3,6 +3,7 @@ window.onload = function () {
     const seconds = document.getElementsByClassName("seconds")[0].children;
     const scales = document.getElementsByClassName("scale")[0].children;
     const left = document.getElementsByClassName("left")[0]
+    const details = document.getElementsByClassName("details")[0]
 
 
     for (let i = 0; i < seconds.length; i++) {
@@ -47,7 +48,7 @@ window.onload = function () {
         time_start.setTime(Math.round(time_start.getTime() + (time_grow * (24 / time_rule))));
 
         let y_c = time_start.getFullYear()
-        let mn_c = time_start.getMonth()
+        let mn_c = time_start.getMonth() + 1
         let d_c = time_start.getDate()
 
         y_c = parseInt(y_c) - 2000
@@ -58,6 +59,7 @@ window.onload = function () {
         h_c = h_c >= 0 ? h_c : h_c + 24
 
         left.innerHTML = y_c + "-" + mn_c + "-" + d_c;
+        details.innerHTML = h_c + ":" + m + ":" + s
         hour.style.transform = `rotate(${h_c * 15}deg)`
         min.style.transform = `rotate(${m * 6}deg)`
         sec.style.transform = `rotate(${s * 6}deg)`
